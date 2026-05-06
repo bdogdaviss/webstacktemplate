@@ -15,7 +15,8 @@ Reference web stack: React SPA → CDN → Load Balancer → Node.js API → Red
 | DB layer (Prisma schema + seed)          | ✅ scaffolded; run `npm run db:migrate` to apply |
 | CI workflow                              | ✅ per-workspace build + typecheck             |
 | Dockerized app services (api + frontend via nginx) | ✅ `docker compose up --build`            |
-| Lint + test suites                       | ⏳                                             |
+| Lint (ESLint flat config) per workspace  | ✅ runs in CI                                  |
+| Tests (Vitest) per workspace             | ✅ runs in CI                                  |
 
 ## Docs
 

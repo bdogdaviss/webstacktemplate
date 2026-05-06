@@ -10,5 +10,6 @@
 - [x] CI status badge in README
 - [x] Dockerize `/api` + `/frontend` (multi-stage Dockerfiles, nginx proxies `/api` to api container)
 - [ ] `docker-compose.override.yml` for in-container hot reload (optional; `npm run dev` already covers local hot reload)
-- [ ] ESLint + Prettier configs per workspace; CI lint step
-- [ ] Vitest (frontend) + Jest/Vitest (api) test suites; CI test step
+- [x] ESLint configs per workspace + CI lint step (flat config; api uses typescript-eslint)
+- [x] Vitest test suites in both workspaces + CI test step (api uses supertest against exported `createApp`)
+- [ ] Prettier (formatter) — optional polish on top of ESLint

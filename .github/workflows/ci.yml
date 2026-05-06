@@ -7,7 +7,7 @@ on:
 
 jobs:
   frontend:
-    name: Frontend build
+    name: Frontend lint, test, build
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -20,10 +20,12 @@ jobs:
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
+      - run: npm run lint
+      - run: npm test
       - run: npm run build
 
   api:
-    name: API typecheck & build
+    name: API lint, test, typecheck, build
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -39,5 +41,7 @@ jobs:
           cache-dependency-path: api/package-lock.json
       - run: npm ci
       - run: npm run db:generate
+      - run: npm run lint
+      - run: npm test
       - run: npm run typecheck
       - run: npm run build
