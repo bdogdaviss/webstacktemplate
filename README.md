@@ -14,7 +14,7 @@ Reference web stack: React SPA → CDN → Load Balancer → Node.js API → Red
 | API (Express + TypeScript)               | ✅ smoke-tested                                |
 | DB layer (Prisma schema + seed)          | ✅ scaffolded; run `npm run db:migrate` to apply |
 | CI workflow                              | ✅ per-workspace build + typecheck             |
-| Dockerized app services + override compose | ⏳                                             |
+| Dockerized app services (api + frontend via nginx) | ✅ `docker compose up --build`            |
 | Lint + test suites                       | ⏳                                             |
 
 ## Docs

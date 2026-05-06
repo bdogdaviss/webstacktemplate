@@ -8,6 +8,7 @@
 - [x] QUICKSTART updated with real, working commands
 - [x] Wire frontend → API (fetch `/api/hello` from `App.tsx` via Vite proxy)
 - [x] CI status badge in README
-- [ ] Dockerize `/api` + `/frontend` (Dockerfiles + `docker-compose.override.yml` for in-container hot reload)
+- [x] Dockerize `/api` + `/frontend` (multi-stage Dockerfiles, nginx proxies `/api` to api container)
+- [ ] `docker-compose.override.yml` for in-container hot reload (optional; `npm run dev` already covers local hot reload)
 - [ ] ESLint + Prettier configs per workspace; CI lint step
 - [ ] Vitest (frontend) + Jest/Vitest (api) test suites; CI test step

@@ -1,50 +1,49 @@
 # Quickstart
 
-Real, working commands for local development.
+Two ways to run the stack: **all-in-Docker** (closest to production) or **local dev** (faster iteration with hot reload).
 
-## 1. Clone & configure env
+## Option A — All-in-Docker
 
 ```bash
 git clone https://github.com/bdogdaviss/webstacktemplate.git
 cd webstacktemplate
-cp .env.example .env   # edit if defaults don't suit you
+docker compose up -d --build
+# open http://localhost:5173 — frontend served by nginx, /api/* proxied to api container
+curl http://localhost:5173/api/hello   # {"message":"Hello from the API"}
 ```
 
-## 2. Start infra (PostgreSQL + Redis)
+Run migrations once Postgres is healthy:
 
 ```bash
-docker compose up -d
+docker compose exec api sh -c 'echo "migrations not run from container yet; see local dev"'
+# For now, run from host: cd api && DATABASE_URL=postgresql://postgres:password@localhost:5433/webstackdb npx prisma migrate deploy
 ```
 
-## 3. Install API + run migrations and seed
+## Option B — Local dev (hot reload)
 
 ```bash
+cp .env.example .env
+docker compose up -d postgres redis     # infra only
 cd api
 npm install
-npm run db:migrate     # creates tables in Postgres (Prisma)
-npm run db:seed        # inserts demo@example.com user
-```
+npm run db:migrate                      # creates tables (Prisma)
+npm run db:seed                         # inserts demo@example.com
+npm run dev                             # http://localhost:3000
 
-Then start the API in watch mode:
-
-```bash
-npm run dev            # http://localhost:3000  (try /health and /api/hello)
-```
-
-## 4. Install + start the frontend
-
-```bash
-cd ../frontend
+# in a second terminal
+cd frontend
 npm install
-npm run dev            # http://localhost:5173
+npm run dev                             # http://localhost:5173 (Vite proxies /api)
 ```
 
-## 5. Smoke test
+## Ports
 
-```bash
-curl http://localhost:3000/health
-# {"status":"ok","uptime":...}
-```
+| Service  | Host port | Container port | Notes                                    |
+| -------- | --------- | -------------- | ---------------------------------------- |
+| frontend | 5173      | 80 (nginx)     | also Vite dev server in Option B         |
+| api      | 3000      | 3000           |                                          |
+| postgres | 5433      | 5432           | non-standard host port to avoid conflicts |
+| redis    | 6380      | 6379           | non-standard host port to avoid conflicts |
 
 ---
 
