@@ -1,15 +1,13 @@
-# TODO — Full scaffold
-
-Tracker for the work needed to make `QUICKSTART.md` real (10–20 files).
+# TODO — Remaining work
 
 - [x] Infra: `.env.example`, `docker-compose.yml`, `.gitignore`
 - [x] `/frontend` — Vite + React + TypeScript
 - [x] `/api` — Node + TypeScript (Express skeleton with `/health`, `/api/hello`)
-- [ ] DB layer — migrations + seed (Prisma or Knex)
-- [ ] Wire `.env.example` values across both services
-- [ ] `docker-compose.override.yml` for dev hot-reload
-- [ ] CI workflow (lint, typecheck, test, build)
-- [ ] Replace aspirational commands in `QUICKSTART.md` with real ones
-- [ ] Remove "⚠️ scaffolding pending" banner
-
-When all boxes are ticked, the repo is ready for public use.
+- [x] DB layer — Prisma schema (`User` model) + seed script + npm scripts
+- [x] CI workflow — per-workspace build + typecheck (GitHub Actions)
+- [x] QUICKSTART updated with real, working commands
+- [ ] Wire frontend → API (fetch `/api/hello` from `App.tsx`)
+- [ ] Dockerize `/api` + `/frontend` (Dockerfiles + `docker-compose.override.yml` for in-container hot reload)
+- [ ] ESLint + Prettier configs per workspace; CI lint step
+- [ ] Vitest (frontend) + Jest/Vitest (api) test suites; CI test step
+- [ ] Add CI status badge to README
