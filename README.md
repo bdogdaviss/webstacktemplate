@@ -1,5 +1,7 @@
 # webstacktemplate
 
+[![CI](https://github.com/bdogdaviss/webstacktemplate/actions/workflows/ci.yml/badge.svg)](https://github.com/bdogdaviss/webstacktemplate/actions/workflows/ci.yml)
+
 Reference web stack: React SPA → CDN → Load Balancer → Node.js API → Redis → PostgreSQL.
 
 ## Status
