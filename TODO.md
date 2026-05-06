@@ -4,7 +4,7 @@ Tracker for the work needed to make `QUICKSTART.md` real (10–20 files).
 
 - [x] Infra: `.env.example`, `docker-compose.yml`, `.gitignore`
 - [x] `/frontend` — Vite + React + TypeScript
-- [ ] `/api` — Node + TypeScript (Express skeleton)
+- [x] `/api` — Node + TypeScript (Express skeleton with `/health`, `/api/hello`)
 - [ ] DB layer — migrations + seed (Prisma or Knex)
 - [ ] Wire `.env.example` values across both services
 - [ ] `docker-compose.override.yml` for dev hot-reload

@@ -35,6 +35,6 @@ Never commit a real `.env` — it's gitignored.
 - [x] Architecture diagram (`architecture.md`)
 - [x] Infra scaffold (`docker-compose.yml`, `.env.example`)
 - [x] Frontend scaffold (Vite + React + TypeScript) — `cd frontend && npm install && npm run dev`
-- [ ] API scaffold (Node + Express/Nest)
+- [x] API scaffold (Node + Express + TypeScript) — `cd api && npm install && npm run dev`
 - [ ] Database migrations & seed scripts
 - [ ] CI / lint / typecheck
