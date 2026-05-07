@@ -49,12 +49,15 @@ export default function Hero() {
         {profile.bio && (
           <p className="mt-4 max-w-2xl text-base text-subtle">{profile.bio}</p>
         )}
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap items-center gap-3">
           <Link
             to="/projects"
-            className="inline-flex items-center rounded-md bg-fg px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+            aria-label="View Projects"
+            className="rainbow relative z-0 inline-flex items-center justify-center overflow-hidden rounded-full p-0.5 transition duration-300 hover:scale-105 active:scale-100"
           >
-            View Projects
+            <span className="rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white">
+              View Projects
+            </span>
           </Link>
           <Link
             to="/contact"

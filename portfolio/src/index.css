@@ -63,6 +63,27 @@
   to   { opacity: 0; transform: translate(-50%, -48%) scale(0.96); }
 }
 
+/* Rainbow glow used by the Hero "View Projects" CTA */
+@keyframes rainbow-rotate {
+  100% { transform: rotate(1turn); }
+}
+
+.rainbow::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  filter: blur(6px);
+  background-image: linear-gradient(#ff0a7f, #780eff);
+  animation: rainbow-rotate 4s linear infinite;
+}
+
 @layer base {
   html {
     background-color: var(--color-bg);
