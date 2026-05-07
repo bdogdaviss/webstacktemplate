@@ -15,3 +15,21 @@ if (typeof globalThis.IntersectionObserver === 'undefined') {
   globalThis.IntersectionObserver =
     MockIntersectionObserver as unknown as typeof IntersectionObserver
 }
+
+// jsdom provides a partial matchMedia in newer versions but not always — make
+// sure useTheme's prefers-color-scheme query has something to bind to.
+if (typeof window !== 'undefined' && typeof window.matchMedia !== 'function') {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: (query: string): MediaQueryList => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      addListener: () => {},
+      removeListener: () => {},
+      dispatchEvent: () => false,
+    }) as unknown as MediaQueryList,
+  })
+}

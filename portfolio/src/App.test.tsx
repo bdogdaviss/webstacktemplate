@@ -61,6 +61,13 @@ describe('Portfolio shell', () => {
     expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument()
   })
 
+  it('renders the theme toggle button in the Nav', () => {
+    renderAt('/')
+    expect(
+      screen.getByRole('button', { name: /theme:/i }),
+    ).toBeInTheDocument()
+  })
+
   it('shows confirmation dialog when a project thumbnail is clicked, and opens the URL only after Continue', async () => {
     const user = userEvent.setup()
     const open = vi.spyOn(window, 'open').mockImplementation(() => null)
