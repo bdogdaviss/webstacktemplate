@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Divider from '../components/Divider'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
 import ProjectsPreview from '../components/ProjectsPreview'
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <Divider />
       <Experience />
       <Skills />
       <ProjectsPreview />
