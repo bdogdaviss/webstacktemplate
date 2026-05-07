@@ -4,7 +4,6 @@ export type Social = {
 }
 
 export const socials: Social[] = [
-  { label: 'GitHub', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Email', href: 'mailto:' },
+  { label: 'GitHub', href: 'https://github.com/bdogdaviss' },
+  { label: 'Email', href: 'mailto:baronmichaeldavis@gmail.com' },
 ]

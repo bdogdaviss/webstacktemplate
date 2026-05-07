@@ -20,11 +20,14 @@
 - [x] Multi-route: `/`, `/projects`, `/blog`, `/contact`
 - [x] Dark grayscale theme, Inter (body/heading) + Playfair Display (Resume "signature")
 - [x] CI job (lint + test + build)
-- [ ] Fill placeholders: name, tagline, bio, location
-- [ ] Real projects in `src/data/projects.ts` + thumbnails in `public/images/`
-- [ ] Real social links in `src/data/socials.ts`
-- [ ] Resume PDF at `public/resume.pdf`
-- [ ] Real blog posts (or remove `/blog` route if not used)
-- [ ] Working contact form (Resend / Formspree / Vercel form action)
-- [ ] Vercel deploy config (root: `portfolio/`)
+- [x] Fill placeholders: name, tagline, bio, location (Baron Davis)
+- [x] Real projects in `src/data/projects.ts` (7 projects: Aura, OmniStrive, SAP, CertSync, Friday, Wakeup, B-Dog Pressure Washing)
+- [x] Real social links in `src/data/socials.ts` (GitHub, Email)
+- [x] Real skills in `src/data/skills.ts` (from resume)
+- [x] Removed unused `/blog` route (re-add when posts exist)
+- [ ] Drop the actual `Baron Davis Resume 2026.pdf` into `portfolio/public/resume.pdf` (Resume link in nav currently 404s)
+- [ ] Add project thumbnails to `portfolio/public/images/` and reference them in `projects.ts` (currently a gradient box placeholder)
+- [ ] LinkedIn URL in `socials.ts` if you want it visible
+- [ ] Working contact form (Resend / Formspree / Vercel form action) — currently links go to email + GitHub
+- [ ] Vercel deploy (set Root Directory to `portfolio/` in project settings)
 - [ ] Custom domain

@@ -1,4 +1,4 @@
-const placeholderSkills = ['', '', '', '', '', '', '', '']
+import { skills } from '../data/skills'
 
 export default function Skills() {
   return (
@@ -11,12 +11,12 @@ export default function Skills() {
         Skills
       </h2>
       <ul className="mt-6 flex flex-wrap gap-2">
-        {placeholderSkills.map((s, i) => (
+        {skills.map((s) => (
           <li
-            key={i}
+            key={s}
             className="rounded-md border border-border bg-card px-3 py-1.5 font-mono text-xs text-subtle"
           >
-            {s || '      '}
+            {s}
           </li>
         ))}
       </ul>

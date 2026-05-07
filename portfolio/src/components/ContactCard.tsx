@@ -11,7 +11,10 @@ export default function ContactCard() {
         <h2 id="contact-heading" className="text-2xl sm:text-3xl">
           Get in touch
         </h2>
-        <p className="mt-3 text-base text-subtle">{/* short prompt */} </p>
+        <p className="mt-3 text-base text-subtle">
+          Open to full-time roles and freelance work in DevOps, infrastructure,
+          and full-stack engineering. The fastest way to reach me is email.
+        </p>
         <ul className="mt-6 flex flex-wrap gap-3">
           {socials.map((s) => (
             <li key={s.label}>

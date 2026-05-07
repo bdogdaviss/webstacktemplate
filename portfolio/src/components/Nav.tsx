@@ -4,7 +4,6 @@ import { profile } from '../data/profile'
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/projects', label: 'Projects' },
-  { to: '/blog', label: 'Blog' },
   { to: '/contact', label: 'Contact' },
 ]
 

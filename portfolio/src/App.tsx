@@ -3,7 +3,6 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
-import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
 function Layout() {
@@ -25,7 +24,6 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="blog" element={<Blog />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
