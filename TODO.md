@@ -27,7 +27,7 @@
 - [x] Removed unused `/blog` route (re-add when posts exist)
 - [x] Drop the actual `Baron Davis Resume 2026.pdf` into `portfolio/public/resume.pdf` (Resume link in nav now resolves)
 - [ ] Add project thumbnails to `portfolio/public/images/` and reference them in `projects.ts` (currently a gradient box placeholder)
-- [ ] LinkedIn URL in `socials.ts` if you want it visible
+- [x] LinkedIn URL in `socials.ts`
 - [ ] Working contact form (Resend / Formspree / Vercel form action) — currently links go to email + GitHub
 - [ ] Vercel deploy (set Root Directory to `portfolio/` in project settings)
 - [ ] Custom domain
