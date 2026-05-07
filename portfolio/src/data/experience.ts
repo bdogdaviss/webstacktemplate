@@ -3,6 +3,7 @@ export type ExperienceEntry = {
   role: string
   period: string
   description: string
+  logo?: string
 }
 
 export const experience: ExperienceEntry[] = [
@@ -19,6 +20,7 @@ export const experience: ExperienceEntry[] = [
     period: 'Jun 2025 – Present',
     description:
       'Lead developer for a Louisiana nonprofit connecting retired military and law-enforcement veterans with schools, churches, and healthcare facilities seeking qualified security personnel. Built and maintain the central web platform for vetting, onboarding, and matching.',
+    logo: '/images/sap.png',
   },
   {
     role: 'Founder & Developer',

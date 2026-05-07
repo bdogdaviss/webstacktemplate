@@ -12,10 +12,7 @@ export default function Experience() {
       </h2>
       <ol className="mt-8 space-y-8">
         {experience.map((entry, i) => (
-          <li
-            key={i}
-            className="border-l border-border pl-6"
-          >
+          <li key={i} className="border-l border-border pl-6">
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <h3 className="text-lg font-semibold">
                 {entry.role || <span className="text-muted">Role</span>}
@@ -24,8 +21,19 @@ export default function Experience() {
                 {entry.period || ' '}
               </span>
             </div>
-            <p className="mt-1 text-sm text-subtle">
-              {entry.company || ' '}
+            <p className="mt-1 flex items-center gap-2 text-sm text-subtle">
+              {entry.logo && (
+                <img
+                  src={entry.logo}
+                  alt=""
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-5 w-5 shrink-0 rounded-sm object-contain"
+                />
+              )}
+              <span>{entry.company || ' '}</span>
             </p>
             <p className="mt-3 text-sm leading-relaxed text-subtle">
               {entry.description || ' '}
