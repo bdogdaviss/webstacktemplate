@@ -3,7 +3,7 @@ import About from '../components/About'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
 import ProjectsPreview from '../components/ProjectsPreview'
-import ContactCard from '../components/ContactCard'
+import SkillsMarquee from '../components/SkillsMarquee'
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <ProjectsPreview />
-      <ContactCard />
+      <SkillsMarquee />
     </>
   )
 }
