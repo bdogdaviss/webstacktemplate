@@ -35,6 +35,7 @@ export const experience: ExperienceEntry[] = [
     period: 'May 2025 – Aug 2025',
     description:
       'Built and maintained containerized microservices using Docker and Kubernetes for a financial data management platform. Authored CI/CD pipelines (YAML + Justfiles), automated SGE master server creation and node-balancer configuration, and managed AWS (EC2, S3, IAM, CloudWatch). Tooling in Go and Bash.',
+    logo: '/images/cwiq.png',
   },
   {
     role: 'Data Team',
@@ -42,5 +43,6 @@ export const experience: ExperienceEntry[] = [
     period: 'May 2023 – May 2024',
     description:
       'Supported data pipeline operations for elite quant hedge fund clients including Quantbot Technologies, Schonfeld, Jain Global, and Estimize. Worked directly with client teams to troubleshoot data issues. Represented Code Willing at Neudata Summit (NYC) and BattleFin (Miami).',
+    logo: '/images/cwiq.png',
   },
 ]
