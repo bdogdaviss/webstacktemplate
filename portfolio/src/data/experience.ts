@@ -4,6 +4,7 @@ export type ExperienceEntry = {
   period: string
   description: string
   logo?: string
+  companyUrl?: string
 }
 
 export const experience: ExperienceEntry[] = [
@@ -14,6 +15,7 @@ export const experience: ExperienceEntry[] = [
     description:
       "Co-founded an enterprise data platform extending Code Willing's patent-approved file system to healthcare, energy, retail, and government. Architected the product website and go-to-market presence and designed data ingestion, compute, and distribution pipelines.",
     logo: '/images/omni.jpg',
+    companyUrl: 'https://omni-strive.com',
   },
   {
     role: 'Programmer',
@@ -22,6 +24,7 @@ export const experience: ExperienceEntry[] = [
     description:
       'Lead developer for a Louisiana nonprofit connecting retired military and law-enforcement veterans with schools, churches, and healthcare facilities seeking qualified security personnel. Built and maintain the central web platform for vetting, onboarding, and matching.',
     logo: '/images/sap.png',
+    companyUrl: 'https://www.safetyalertpatrol.org',
   },
   {
     role: 'Founder & Developer',
@@ -30,6 +33,7 @@ export const experience: ExperienceEntry[] = [
     description:
       'Built and launched a PC optimization tool used by 50,000+ gamers. Engineered hardware-locked licensing, PayPal payment processing with automated key delivery, and a full-stack TypeScript / Tailwind web platform on Railway. Grew the brand to 10K+ TikTok followers.',
     logo: '/images/aura.png',
+    companyUrl: 'https://auraoptimizer.com',
   },
   {
     role: 'DevOps Engineer',
@@ -38,6 +42,7 @@ export const experience: ExperienceEntry[] = [
     description:
       'Built and maintained containerized microservices using Docker and Kubernetes for a financial data management platform. Authored CI/CD pipelines (YAML + Justfiles), automated SGE master server creation and node-balancer configuration, and managed AWS (EC2, S3, IAM, CloudWatch). Tooling in Go and Bash.',
     logo: '/images/cwiq.png',
+    companyUrl: 'https://cwiq.io',
   },
   {
     role: 'Data Team',
@@ -46,5 +51,6 @@ export const experience: ExperienceEntry[] = [
     description:
       'Supported data pipeline operations for elite quant hedge fund clients including Quantbot Technologies, Schonfeld, Jain Global, and Estimize. Worked directly with client teams to troubleshoot data issues. Represented Code Willing at Neudata Summit (NYC) and BattleFin (Miami).',
     logo: '/images/cwiq.png',
+    companyUrl: 'https://cwiq.io',
   },
 ]

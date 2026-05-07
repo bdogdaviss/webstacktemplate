@@ -22,7 +22,25 @@ export default function Experience() {
               </span>
             </div>
             <p className="mt-1 flex items-center gap-2 text-sm text-subtle">
-              {entry.logo && (
+              {entry.logo && entry.companyUrl ? (
+                <a
+                  href={entry.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${entry.company} website`}
+                  className="shrink-0 rounded-sm transition-opacity hover:opacity-75"
+                >
+                  <img
+                    src={entry.logo}
+                    alt={`${entry.company} logo`}
+                    width={24}
+                    height={24}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-5 w-5 rounded-sm object-contain"
+                  />
+                </a>
+              ) : entry.logo ? (
                 <img
                   src={entry.logo}
                   alt=""
@@ -32,7 +50,7 @@ export default function Experience() {
                   decoding="async"
                   className="h-5 w-5 shrink-0 rounded-sm object-contain"
                 />
-              )}
+              ) : null}
               <span>{entry.company || ' '}</span>
             </p>
             <p className="mt-3 text-sm leading-relaxed text-subtle">
