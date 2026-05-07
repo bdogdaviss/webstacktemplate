@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/playfair-display";
+
+@theme {
+  /* Pure grayscale palette — dark theme only */
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-card: #161616;
+  --color-border: #262626;
+  --color-muted: #525252;
+  --color-subtle: #a3a3a3;
+  --color-fg: #fafafa;
+
+  /* Font tokens */
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display Variable", ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-body);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--color-fg);
+  }
+
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}

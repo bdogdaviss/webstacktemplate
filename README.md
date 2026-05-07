@@ -18,6 +18,16 @@ Reference web stack: React SPA → CDN → Load Balancer → Node.js API → Red
 | Lint (ESLint flat config) per workspace  | ✅ runs in CI                                  |
 | Tests (Vitest) per workspace             | ✅ runs in CI                                  |
 
+## Personal portfolio (separate, design-only)
+
+| Layer                                        | State                              |
+| -------------------------------------------- | ---------------------------------- |
+| `portfolio/` Vite + React + TS + Tailwind v4 | ✅ scaffolded with placeholder content (multi-route: `/`, `/projects`, `/blog`, `/contact`) |
+| Real personal content                        | ⏳ deferred — design first          |
+| Deploy (Vercel from `portfolio/`)            | ⏳                                  |
+
+`portfolio/` is independent of `frontend/` and `api/`. Run with `cd portfolio && npm install && npm run dev` (port 5174).
+
 ## Docs
 
 - [architecture.md](architecture.md) — system diagram and layer-by-layer breakdown
