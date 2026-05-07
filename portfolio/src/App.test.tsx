@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { MemoryRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import Pagination from './components/Pagination'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
@@ -16,6 +17,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
+      <Pagination />
       <Footer />
     </>
   )
@@ -65,6 +67,21 @@ describe('Portfolio shell', () => {
     renderAt('/')
     expect(
       screen.getByRole('button', { name: /theme:/i }),
+    ).toBeInTheDocument()
+  })
+
+  it('renders pagination with the current page marked active', () => {
+    renderAt('/projects')
+    const nav = screen.getByRole('navigation', { name: /pagination/i })
+    const active = screen.getByRole('button', { name: /go to projects/i })
+    expect(nav).toContainElement(active)
+    expect(active).toHaveAttribute('aria-current', 'page')
+    // The previous + next anchors flank the numbers
+    expect(
+      screen.getByRole('link', { name: /previous page: home/i }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: /next page: contact/i }),
     ).toBeInTheDocument()
   })
 

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import Pagination from './components/Pagination'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
@@ -12,6 +13,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
+      <Pagination />
       <Footer />
     </>
   )
