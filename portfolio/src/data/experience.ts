@@ -13,6 +13,7 @@ export const experience: ExperienceEntry[] = [
     period: '2025 – Present',
     description:
       "Co-founded an enterprise data platform extending Code Willing's patent-approved file system to healthcare, energy, retail, and government. Architected the product website and go-to-market presence and designed data ingestion, compute, and distribution pipelines.",
+    logo: '/images/omni.jpg',
   },
   {
     role: 'Programmer',
@@ -28,6 +29,7 @@ export const experience: ExperienceEntry[] = [
     period: 'Summer 2025 – Present',
     description:
       'Built and launched a PC optimization tool used by 50,000+ gamers. Engineered hardware-locked licensing, PayPal payment processing with automated key delivery, and a full-stack TypeScript / Tailwind web platform on Railway. Grew the brand to 10K+ TikTok followers.',
+    logo: '/images/aura.png',
   },
   {
     role: 'DevOps Engineer',
