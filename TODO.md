@@ -25,7 +25,7 @@
 - [x] Real social links in `src/data/socials.ts` (GitHub, Email)
 - [x] Real skills in `src/data/skills.ts` (from resume)
 - [x] Removed unused `/blog` route (re-add when posts exist)
-- [ ] Drop the actual `Baron Davis Resume 2026.pdf` into `portfolio/public/resume.pdf` (Resume link in nav currently 404s)
+- [x] Drop the actual `Baron Davis Resume 2026.pdf` into `portfolio/public/resume.pdf` (Resume link in nav now resolves)
 - [ ] Add project thumbnails to `portfolio/public/images/` and reference them in `projects.ts` (currently a gradient box placeholder)
 - [ ] LinkedIn URL in `socials.ts` if you want it visible
 - [ ] Working contact form (Resend / Formspree / Vercel form action) — currently links go to email + GitHub
