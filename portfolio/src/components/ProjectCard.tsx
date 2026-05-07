@@ -6,10 +6,21 @@ export default function ProjectCard({ project }: { project: Project }) {
       aria-labelledby={`project-${project.slug}-title`}
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:bg-surface"
     >
-      <div
-        aria-hidden="true"
-        className="aspect-[16/10] w-full border-b border-border bg-gradient-to-br from-surface to-bg"
-      />
+      <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border bg-bg">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={`${project.title} landing page`}
+            width={1280}
+            height={800}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        ) : (
+          <div className="h-full w-full bg-gradient-to-br from-surface to-bg" />
+        )}
+      </div>
       <div className="flex flex-1 flex-col gap-3 p-5">
         <h3
           id={`project-${project.slug}-title`}
@@ -36,6 +47,8 @@ export default function ProjectCard({ project }: { project: Project }) {
         )}
         <a
           href={project.href}
+          target="_blank"
+          rel="noreferrer"
           className="mt-2 inline-flex w-fit items-center text-sm text-fg underline-offset-4 hover:underline"
         >
           View →
