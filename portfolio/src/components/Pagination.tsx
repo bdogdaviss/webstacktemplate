@@ -22,11 +22,12 @@ export default function Pagination() {
   const next = pages[currentIndex + 1]
 
   const baseLink =
-    'inline-flex h-11 items-center justify-center rounded-md border border-border text-sm font-medium text-fg transition-colors'
+    'inline-flex h-11 items-center justify-center rounded-md border border-border text-sm font-medium transition-colors'
   const number = `${baseLink} w-11`
   const arrow = `${baseLink} px-4 gap-1.5`
-  const interactive = 'hover:bg-card cursor-pointer'
-  const disabled = 'pointer-events-none opacity-40'
+  const interactive = 'text-fg hover:bg-card cursor-pointer'
+  const active = 'bg-fg text-bg cursor-default'
+  const disabled = 'text-fg pointer-events-none opacity-40'
 
   return (
     <nav
@@ -61,10 +62,7 @@ export default function Pagination() {
                 onClick={() => navigate(p.to)}
                 aria-current={isActive ? 'page' : undefined}
                 aria-label={`Go to ${p.label}`}
-                className={[
-                  number,
-                  isActive ? 'bg-fg text-bg' : interactive,
-                ].join(' ')}
+                className={[number, isActive ? active : interactive].join(' ')}
               >
                 {i + 1}
               </button>
